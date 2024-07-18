@@ -13,7 +13,7 @@
         </div>
     @endif
     <div class="card-head mb-3">
-        <a href="{{route('admin.users.create')}}" class='btn btn-primary'>Nuevo Usuario</a>
+        <a href="{{route('admin.users.create')}}" class='btn btn-primary bg-green'>Nuevo Usuario</a>
     </div>
     <div class="card">
         <div class="card-body">
@@ -25,6 +25,7 @@
                         <th>Correo</th>
                         <th>Contraseña</th>
                         <th>Controles</th>
+                        <th>Prueba</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +36,7 @@
                         <td>{{$user->email}}</td>
                         <td>{{$user->password}}</td>
                         <td>
-                            <a href="{{route('admin.users.edit',$user)}}" class='btn btn-primary btn-sm d-inline w-100'>Editar</a><br>
+                            <a href="{{route('admin.users.edit',$user)}}" class='btn btn-primary bg-yellow btn-sm d-inline w-100'>Editar</a><br>
                             <form action="{{route('admin.users.destroy',$user)}}" method='POST'>
                                 @method('delete')
                                 @csrf
@@ -52,6 +53,14 @@
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .bg-green {
+            background-color: green;
+        }
+        .bg-yellow {
+            background-color: yellow;
+        }
+    </style>
 @stop
 
 @section('js')
