@@ -8,7 +8,7 @@
 
 @section('content')
 <h1>Esto es una prueba de un h1</h1>
-<h5>Prueba de un H5</h5>
+<h5>Prueba de un H5, para prueba</h5>
     @if(session('mensaje'))
         <div class="alert alert-success">
             <strong>{{session('mensaje')}}</strong>
