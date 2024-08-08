@@ -7,12 +7,6 @@
 @stop
 
 @section('content')
-<h1>Esto es una prueba de un h1</h1>
-<<<<<<< HEAD
-<h5>Prueba de un H5, esto es otra prueba igual</h5>
-=======
-<h5>Prueba de un H5, para prueba</h5>
->>>>>>> ramaDificil
     @if(session('mensaje'))
         <div class="alert alert-success">
             <strong>{{session('mensaje')}}</strong>
